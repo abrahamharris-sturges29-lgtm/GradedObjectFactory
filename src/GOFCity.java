@@ -1,5 +1,5 @@
 public class GOFCity {
-
+    // City attributes
     public String location;
     public String cityName;
     public String language;
@@ -13,7 +13,12 @@ public class GOFCity {
     public boolean isAirport;
 
 
+    // Constructor creates city attributes
+
 public GOFCity(int pPop, int pDate, int pTemp, String pLoc, String pName, String pLang, boolean pLandlocked, boolean pAirport){
+
+
+    population = (int) (Math.random() * 1000);
 
     location = pLoc;
     cityName = pName;
@@ -27,6 +32,8 @@ public GOFCity(int pPop, int pDate, int pTemp, String pLoc, String pName, String
     isLandlocked = pLandlocked;
 }
 
+    // Prints all city attributes
+
 public void printinfo(){
 
     System.out.println("the city is located in "+location);;
@@ -39,4 +46,16 @@ public void printinfo(){
     System.out.println("it is "+isAirport+" that there is an airport");
 
 }
+//increases population
+    public void increasePopulation(int multi) {
+        population += 1000*multi;
+    }
+//changes language
+    public void changeLanguage(String newLanguage) {
+        language = newLanguage;
+    }
+
+
+
+
 }
